@@ -19,7 +19,7 @@ public class AiAssIstant {
 
     @Override
     public String toString() {
-        return "Ai assistant" + name + "\nModel: " + model +
+        return "Ai assistant: " + name + "\nModel: " + model +
                 "\nLanguage: " + language +
                 "\nResponse style: " + responseStyle +
                 "\nMemory: " + memory +

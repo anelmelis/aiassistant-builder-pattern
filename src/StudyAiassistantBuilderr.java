@@ -1,55 +1,10 @@
-public class StudyAiassistantBuilderr implements Aibuilderr {
-    private String name;
-    private String model;
-    private String language;
-    private String responseStyle;
-    private boolean memory;
-    private String specialization;
+public class StudyAiassistantBuilderr extends Abstractt {
 
-    @Override
-    public StudyAiassistantBuilderr setName(String name) {
-        this.name = name;
-        return this;
+    public StudyAiassistantBuilderr() {
+        setModel("gpt-5");
+        setLanguage("English");
+        setResponseStyle("Simple");
+        setMemory(true);
+        setSpecialization("Education");
     }
-
-    @Override
-    public StudyAiassistantBuilderr setModel(String model) {
-        this.model = model;
-        return this;
-    }
-
-    @Override
-    public StudyAiassistantBuilderr setLanguage(String language) {
-        this.language = language;
-        return this;
-    }
-
-    @Override
-    public StudyAiassistantBuilderr setResponseStyle(String responseStyle) {
-        this.responseStyle = responseStyle;
-        return this;
-    }
-
-    @Override
-    public StudyAiassistantBuilderr setMemory(boolean memory) {
-        this.memory = memory;
-        return this;
-    }
-
-    @Override
-    public StudyAiassistantBuilderr setSpecialization(String specialization) {
-        this.specialization = specialization;
-        return this;
-    }
-
-    @Override
-    public AiAssIstant build() {
-        return new AiAssIstant(name,
-                model,
-                language,
-                responseStyle,
-                memory,
-                specialization);
-    }
-
 }
