@@ -1,23 +1,10 @@
 public class Main {
     public static void main(String[] args) {
 
-        AiAssIstant studyAssistant = new StudyAiassistantBuilderr()
-                .setName("Study AI")
-                .setModel("gpt-5")
-                .setLanguage("English")
-                .setResponseStyle("Simple")
-                .setMemory(true)
-                .setSpecialization("education")
-                .build();
+        director Director = new director();
 
-        AiAssIstant codingAssistant = new CodingAiassistantbuilder()
-                .setName("CodeHelper")
-                .setModel("gpt-5")
-                .setLanguage("English")
-                .setResponseStyle("Technical")
-                .setMemory(false)
-                .setSpecialization("programming")
-                .build();
+        AiAssIstant studyAssistant = Director.buildStudyAssistantt();
+        AiAssIstant codingAssistant = Director.buildCodingAssistant();
 
         System.out.println(studyAssistant);
         System.out.println();
